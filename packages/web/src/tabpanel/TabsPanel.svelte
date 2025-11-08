@@ -735,21 +735,7 @@
       </div>
     {/if}
 
-    {#if !isProApp()}
-      <div
-        class="upgrade-button"
-        on:click={() => {
-          openWebLink(
-            `https://www.dbgate.io/purchase/${isElectronAvailable() ? 'premium' : 'team-premium'}/?utm_campaign=premiumUpgradeButton`
-          );
-        }}
-        title="Upgrade to Premium"
-        data-testid="TabsPanel_buttonUpgrade"
-      >
-        <FontIcon icon="icon premium" padRight /> Upgrade
-      </div>
-    {/if}
-
+    
     <div
       class="icon-button"
       on:click={() => showModal(NewObjectModal, { multiTabIndex })}
