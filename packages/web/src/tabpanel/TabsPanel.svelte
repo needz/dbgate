@@ -583,7 +583,8 @@
     
     if (scrollAmount !== 0) {
       e.preventDefault();
-      domTabs.scrollBy({ top: 0, left: scrollAmount < 0 ? -150 : 150, behavior: 'smooth' });
+      // domTabs.scrollBy({ top: 0, left: scrollAmount < 0 ? -150 : 150, behavior: 'smooth' });
+      domTabs.scrollBy({ left: scrollAmount, behavior: 'auto' });
     }  }
 </script>
 
@@ -591,7 +592,7 @@
   <div
     class="tabs"
     class:can-split={allowSplitTab && isProApp()}
-    class:tabs-upgrade-button={!isProApp()}
+    // class:tabs-upgrade-button={!isProApp()}
     on:wheel={handleTabsWheel}
     bind:this={domTabs}
   >
