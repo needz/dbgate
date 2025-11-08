@@ -592,7 +592,6 @@
   <div
     class="tabs"
     class:can-split={allowSplitTab && isProApp()}
-    // class:tabs-upgrade-button={!isProApp()}
     on:wheel={handleTabsWheel}
     bind:this={domTabs}
   >
